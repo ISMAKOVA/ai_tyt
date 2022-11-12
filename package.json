@@ -1,0 +1,53 @@
+{
+  "name": "ai_tyt",
+  "version": "1.0.0",
+  "description": "ai generated music app",
+  "main": "src/index.tsx",
+  "scripts": {
+    "start": "webpack-dev-server .",
+    "build": "webpack ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ISMAKOVA/ai_tyt.git"
+  },
+  "keywords": [
+    "ai"
+  ],
+  "author": "ISMAKOVA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ISMAKOVA/ai_tyt/issues"
+  },
+  "homepage": "https://github.com/ISMAKOVA/ai_tyt#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.5",
+    "@babel/cli": "^7.19.3",
+    "@babel/runtime": "^7.19.0",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "eslint": "^8.24.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^27.0.4",
+    "path": "^0.12.7",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.17.0",
+    "path": "^0.12.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "web-vitals": "^3.0.2",
+    "whatwg-fetch": "^3.6.2"
+  }
+}

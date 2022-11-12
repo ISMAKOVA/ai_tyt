@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "esModuleInterop": true,
+      "jsx": "react",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "lib": [
+        "dom",
+        "esnext"
+      ],
+      "strict": true,
+      "sourceMap": true,
+      "target": "esnext",
+      "types": ["react/next", "react-dom/next"]
+    },
+    "exclude": [
+      "node_modules"
+    ],
+    "include": [
+      "src"
+    ]
+  }
