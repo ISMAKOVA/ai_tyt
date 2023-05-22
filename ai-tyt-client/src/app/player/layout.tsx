@@ -8,14 +8,12 @@ interface Props {
 }
 export default function PlayerLayout({children}: Props) {
     return (
-        <div className="flex min-h-screen flex-col space-y-6">
+        <div className="flex min-h-screen min-w-full flex-col space-y-6">
             <header className="stiky top-0 z-40 mt-16 flex justify-center">
                 <Nav items={items}/>
             </header>
-            <div className="container mx-auto px-4 flex justify-center">
-                <main className={"box-content h-128 w-128 bg-purple"}>
-                    {children}
-                </main>
+            <div className="container min-h-[85vh] min-w-[85vw] mx-auto px-4 flex justify-center ">
+                {children}
             </div>
 
         </div>

@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from "next/link";
 import {cn} from "@/app/utils";
 import {Icon, Icons} from "./icons";
@@ -12,6 +12,11 @@ interface Props {
 
 function Nav({items}: Props) {
     const path = usePathname();
+    const [loaded, setLoaded] = useState(false);
+
+    useEffect(() => {
+        setLoaded(true);
+    }, []);
 
     if (!items?.length) {
         return null;
@@ -25,7 +30,12 @@ function Nav({items}: Props) {
                     item.href &&
                     <Link key={index} href={item.href}>
                         <span className={cn("group flex items-center px-6 py-2 cursor-pointer m-0.5 font-medium",
-                            item.href === path && "rounded-3xl border-solid bg-purple text-gray-dark "
+                            item.href === path && "rounded-3xl border-solid text-gray-dark duration-500 transition-colors ease-in-out",
+                            item.href === path && (
+                                loaded 
+                                ? "bg-purple" 
+                                : "bg-purple-dark"
+                            )
                         )}>
                             <Icon className="mr-2 h-4 w-4" />
                             <span>{item.title}</span>
@@ -36,5 +46,5 @@ function Nav({items}: Props) {
         </nav>
     );
 }
-
+// 
 export default Nav;
